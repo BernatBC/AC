@@ -1,0 +1,98 @@
+Previ:
+1- Instruccions: 5 + 10*9 + 2 = 97
+
+        leal %eax, i
+        movl $0, (%eax)
+        leal %ebx, suma
+        movl $0, (%ebx)
+        leal %ecx, Matriz
+
+for:    cmpl $10, (%eax)
+        jge fi_for
+
+        imul $40, (%eax), %edx
+        movl (%ebx), %ebx
+        addl 8(%ecx, %edx), %ebx
+        leal %edx, suma
+        movl %ebx, (%edx)
+
+        incl (%eax)
+        jmp for
+fi_for:
+
+
+
+
+2- Instruccions: 5 + 10*7 + 2 = 77
+
+        leal %eax, i
+        movl $0, (%eax)
+        leal %ebx, suma
+        movl $0, (%ebx)
+        leal %ecx, Matriz
+
+for:    cmpl $400, (%eax)
+        jge fi_for
+
+        movl (%ebx), %edx
+        addl 8(%ecx, %eax), %edx
+        movl %edx, (%ebx)
+
+        addl $40, %eax
+        jmp for
+fi_for:
+
+
+
+
+3-
+        leal %eax, i
+        movl $0, (%eax)
+        leal %ebx, j
+        movl $0, (%ebx)
+        leal %ecx, ResFila
+        movl $1, (%ecx)
+
+for:    cmpl $10, (%eax)
+        jge fi_for
+
+while:  leal %edx, Matriz
+        imul $40, %eax, %ecx
+        addl %ecx, %edx
+        movl %edx, (%edx, %ebx, 4)
+        cmpl $0, %edx
+        je fi_while
+
+if:     cmpl $100, %edx
+        jle fi_if
+
+        leal %ecx, ResFila
+        subl %edx, (%ecx, %eax, 4)
+fi_if:
+        incl (%ebx)
+        jmp while
+fi_while:
+
+        incl (%eax)
+        movl $0, (%ebx)
+        movl $1, (%ecx, %eax, 4)
+        jmp for
+fi_for:
+
+
+
+
+Final:
+1a-
+
+1b-
+
+1c-
+
+2a-
+
+2b-
+
+2c-
+
+3-
