@@ -25,7 +25,8 @@ Transparències, documentació, exàmens i laboratori (resolt) de l'assignatura 
 - [RAM Avançada](/Transpar%C3%A8ncies/070_RAM_Avanzada.pdf)
 - [Emmagatzematge](/Transpar%C3%A8ncies/080_Almacenamiento.pdf)
 - [Instruccions](/Transpar%C3%A8ncies/090_Instrucciones.pdf)
-- [Conceptes avançats](/Transpar%C3%A8ncies/100_Conceptos_Avanzados.pdf)
+- [Conceptes avançats](/Transpar%C3%A8ncies/100_Conceptos_Avanzados.pdf)                   
+
 · La assignatura també té videos gravats, si els voleu els podeu demanar al vostre professor, si encara no us l'ha passat
 
 · Les transparències i documentació que es pot trobar en aquest repositori són dels seus respectius autors.
