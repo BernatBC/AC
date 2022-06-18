@@ -1,8 +1,0 @@
-1 11885568.000000       (using double)
-2. -886731112448.000000 (using float)
-3. 1                    (using int)
-
-4. 665857⁴-4*470832⁴-4*470832² = 1
-https://www.javatpoint.com/float-vs-double-java
-
-Sorry, not finished here :(
