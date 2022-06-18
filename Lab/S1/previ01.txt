@@ -1,0 +1,44 @@
+1. Hacer “inlining”de una funci´on significa:
+
+Fer inlining d'una funció significa que quan es compili el codi, tots els llocs en que s'hauria de fer una <"trucada"> a la funció, es substitueix per el cos de la funció en si
+
+2.  La opci´on espec´ıfica de compilaci´on de gcc que permite al compilador hacer “inlining”de
+todas las funciones simples es (especifica si se activa o no al activar la opci´on -O2). ¿Para qu´e sirve la opci´on -finline-limit?:
+
+-finline-small-functions, s'activa automàticament per l'opció -O2
+-finline-limit=n, serveix per limitar la mida de les funcions que de les que es farà inlining
+
+3. Explica una forma pr´actica de saber si en un programa ensamblador existe la funci´on
+“Juanito” y c´omo averiguar si, adem´as de existir, esa funci´on es invocada o no:
+
+No es possible saber si existeix una funció en concret com ara "Juanito", a més tampoc és possible saber si s'ha cridat durant l'execució.
+<(https://stackoverflow.com/questions/9411349/how-to-know-if-certain-function-exists-and-has-been-called)>
+
+4. El primer c´odigo ensamblador tiene:
+Inst. est. = 5, Inst. din. = 4000001
+
+MIPS = 285,71; IPC = ~0,25; CPI = ~4; f = 71,72
+
+5. El segundo c´odigo (compilado con -O) tiene:
+Inst. est. = 4, Inst. din. = 3000001
+
+MIPS = 428,57; IPC = ~0,375; CPI = ~2,666666...; f = 142,85
+
+-> El programa assembler generat per el compilador, ja que al compilar el codi optingut amb -O té menys instruccions estàtiques ergo el nº de instruccions dinàmiques és menor i trigui menys a executar-se
+
+6.
+
+Si el c´odigo es instant´aneo: inf.		Si se compila con -O: 
+
+7.
+
+Utilizar la funció GetTime() i getticks()
+
+8. Dadas 5 ejecuciones de 10 ms, 8ms, 13 ms, 15ms y 2ms. Su media:
+
+M. Geomètrica = 7.922; M. Aritmètica = 9.6
+
+Sense els valors extrems: M. Geomètrica = 10.132; M. Aritmètica = 10.333
+
+S'observa que: 
+
