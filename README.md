@@ -26,7 +26,6 @@ Transparències, documentació, exàmens i laboratori (resolt) de l'assignatura 
 - [Emmagatzematge](/Transpar%C3%A8ncies/080_Almacenamiento.pdf)
 - [Instruccions](/Transpar%C3%A8ncies/090_Instrucciones.pdf)
 - [Conceptes avançats](/Transpar%C3%A8ncies/100_Conceptos_Avanzados.pdf)                   
-- [Conceptes avançats](/Transpar%C3%A8ncies/100_Conceptos_Avanzados.pdf)
 
 · La assignatura també té videos gravats, si els voleu els podeu demanar al vostre professor, si encara no us l'ha passat
 
