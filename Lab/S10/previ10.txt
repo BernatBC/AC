@@ -1,0 +1,239 @@
+
+___________________Versio Bernat______________________________
+1-https://namazso.github.io/x86/
+pand: Logical AND
+pcmpgtb: Compare Packed Signed Integers for Greater Than
+movdqa: Move Aligned Packed Integer Values
+movdqu: Move Unaligned Packed Integer Values
+emms:	Empty MMX Technology State
+
+2- https://stackoverflow.com/questions/1458573/attribute-in-gnu-c
+One use is for enforcing memory alignment on variables and structure members.
+
+3-
+pushl	%ebp
+movl	%esp, %ebp
+pushl	%ebx
+pushl	%esi
+
+movl 8(%ebp), %eax				#%eax = @mata
+movl 12(%ebp), %ebx				#%ebx = @matb
+movl 16(%ebp), %ecx
+imul %ecx, %ecx						#%ecx = n^2
+movl $0, %esi							#%esi = iterador = 0
+jmp fi_bucle
+bucle:
+movb $1, %dl
+andb (%eax, %esi), %dl		#%dl = mata[i*n+j] & 1
+movb %dl, (%ebx, %esi)
+cmpb $0, (%ebx, %esi)			#if (matb[i*n+j]>0)
+jle else
+
+movb $255, (%ebx, %esi)		#matb[i*n+j]=255
+jmp fi_if
+
+else:
+movb $0, (%ebx, %esi)		#matb[i*n+j]=0
+fi_if:
+incl %esi
+fi_bucle:
+cmpl %esi, %ecx
+jg bucle
+
+popl	%esi
+popl	%ebx
+movl %ebp,%esp
+popl %ebp
+ret
+
+
+4-
+  pushl $immediat
+  pushl $0
+  pushl $0
+  pushl $0
+  movdqu (%esp), %xmm0
+
+5-
+pushl	%ebp
+movl	%esp, %ebp
+pushl	%ebx
+pushl	%esi
+
+pushl $1
+pushl $0
+pushl $0
+pushl $0
+
+movl 4(%ebp), %eax				#%eax = @mata
+movl 8(%ebp), %ebx				#%ebx = @matb
+movl 12(%ebp), %ecx
+imul %ecx, %ecx						#%ecx = n^2
+movl $0, %esi							#%esi = iterador = 0
+jmp fi_bucle
+bucle:
+movdqu (%esp), %xmm0
+pand (%eax, %esi), %xmm0		#%xmm0 = mata[i*n+j] & 1
+movdqu %xmm0, (%ebx, %esi)
+pcmpgtb $0, (%ebx, %esi)			#if (matb[i*n+j]>0)
+jle else
+
+movdqu $255, (%ebx, %esi)		#matb[i*n+j]=255
+jmp fi_if
+
+else:
+movdqu $0, (%ebx, %esi)		#matb[i*n+j]=0
+fi_if:
+addl $16, %esi
+fi_bucle:
+cmpl %esi, %ecx
+jg bucle
+
+addl $-16, %esp
+popl	%esi
+popl	%ebx
+movl %ebp,%esp
+popl %ebp
+ret
+
+6-
+
+shll $28, %eax
+jne
+
+
+
+
+
+
+
+
+
+
+
+
+____________________Versio Miquel___________________________
+1.
+https://www.felixcloutier.com/x86/index.html
+pand    -> Logical AND
+pcmpgtb -> Compare Packed Signed Integers for Greater Than
+movdqa  -> Move Aligned Packed Integer Values
+movdqu  -> Move Unaligned Packed Integer Values
+emms    -> Empty MMX Technology State
+
+2.
+-The keyword __attribute__ allows you to specify special properties of variables,
+function parameters, or structure.
+-The aligned variable attribute specifies a minimum alignment for the variable
+or structure field, measured in bytes.
+
+3.
+  pushl %ebp            #inicialitzacio
+  movl %esp, %ebp
+  pushl %ebx
+  pushl %esi
+
+  movl 8(%ebp), %eax   # eax = mata
+  movl 12(%ebp), %ebx    # ecx = matb
+  movl 16(%ebp), %edx    # edx = n
+  imul %edx, %edx       # edx = n²
+  movl $0, %esi         # iterador
+
+for:
+  cmpl %edx, %esi
+  jge fifor         #jumps if (%esi >= %edx)
+
+  movb $1, %cl
+  andb (%eax, %esi), %cl  # matb[..] = mata[..]&1
+  movb %cl, (%ebx, %esi)
+
+  if:
+    cmpb $0, (%ebx, %esi)
+    jle else        #jmps if matb[i*n+j]>0)
+
+    movb $255, (%ebx, %esi)
+
+    jmp fi_if
+  else:
+    movb $0, (%ebx, %esi)
+  fi_if:
+
+  incl %esi
+  jmp for
+fifor:
+
+popl %esi
+popl %ebx
+movl %ebp, %esp
+popl %ebp
+ret
+
+
+4.
+https://c9x.me/x86/html/file_module_x86_id_184.html
+MOVDQU xmm1, xmm2/m128, move unaligned double quadword from xmm2 (which can be
+found in a 128 bits memory position) to xmm1.
+
+
+
+5.
+
+pushl %ebp            #inicialitzacio
+movl %esp, %ebp
+pushl %ebx
+
+movl 12(%ebp), %eax   # eax = mata
+movl 8(%ebp), %ebx    # ecx = matb
+movl 4(%ebp), %edx    # edx = n
+imul %edx, %edx       # edx = n²
+movl $0, %esi         # iterador
+
+pushl $0x01010101
+pushl $0x01010101
+pushl $0x01010101
+pushl $0x01010101
+
+for:
+cmpl %edx, %esi
+jge fifor         #jumps if (%esi >= %edx)
+
+movdqu (%esp), %xmm0
+pand (%eax, %esi), %xmm0		#%xmm0 = mata[i*n+j] & 1
+movdqu %xmm0, (%ebx, %esi)
+pcmpgtb $0, (%ebx, %esi)
+
+if:
+  #cmp $0, (%ebx, %esi)
+  jle else        #jmps if matb[i*n+j]>0)
+
+  movb $255, (%ebx, %esi)
+
+  jmp fi_if
+else:
+  movb $0, (%ebx, %esi)
+
+fi_if:
+
+addl $16, %esi
+jmp for
+fifor:
+
+addl $-16, (%esp)
+popl %ebx
+movl %ebp, %esp
+popl %ebp
+ret
+
+
+
+6.
+andl $0x0F, %eax
+jne no_mult
+mult:
+# code
+jmp fi
+no_mult:
+# code
+fi:
+
+
