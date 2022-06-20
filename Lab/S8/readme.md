@@ -7,3 +7,5 @@ This scripts allows you to compile and compute automatically in multithread, the
 You can always (recommended) compile all at once with [ComandosCompilacion](/S8/ComandosCompilacion) and compare the results:                 
 · Give execution permission: `chmod +x ComandosCompilacion`                    
 · Run it: `./ComandosCompilacion`
+
+__Note:__ cheat_lab8 is also available in C++ version [cheat_lab8.cc](/S8/cheat_lab8.cc)
