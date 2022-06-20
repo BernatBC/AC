@@ -1,0 +1,79 @@
+Previ:
+
+1a) Assigna el registre eax el número 1.
+
+1b) Assigna el registre eax el contingut de la quarta posició de memòria.
+
+1c) L'instrucció és erronia ja que "eax" no és cap número. Per indicar que és un registre cal afegir "%".
+
+1d) L'instrucció és erronia ja que "eax" no és cap número. Per indicar que és un registre cal afegir "%".
+
+2) Es produirà el salt quan el registre %ebx tingui un valor igual o major al registre %eax.
+
+3) Es produirà el salt quan el registre %eax tingui un valor igual o major al registre %ebx.
+
+4)
+        movl $0, i
+for:    cmpl $200, i
+        jge fifor
+
+if:     cmpl b, a
+        jle endif
+
+        addl a, b
+        movl b, %eax
+        cltd
+        movl $2, %ebx
+        idivl %ebx
+        subl %eax, a
+
+endif:  incl i
+        jmp for
+fifor:
+
+5)
+
+while (i > 0) {
+    if (a != b) a = 3*(b - a);
+    --i;
+}
+
+6) Un breakpoint fa que el programa s'aturi en aquella posició. Un watchpoint és un breakpoint que s'atura quan el valor de l'expresió ha canviat.
+
+7) Per afegir un breakpoint, fas clic dret a la línia desitjada. Després cliques botó dret al senyal stop, i selecciones l'opció "properties". A la casella ignore count posem el número 15.
+
+8)
+
+Final:
+
+1a) 4
+
+1b) 0
+
+2) 0
+
+3a) 6
+
+3b) 0
+
+4a) (fer demà)
+
+4b) 0x56559220
+
+4c) 0
+
+4d) 1
+
+4e)
+
+5a) 2
+
+5b) 2
+
+6a) 12
+
+6b) 3
+
+7a)
+
+7b) -1624114088
