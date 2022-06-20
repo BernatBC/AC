@@ -4,7 +4,7 @@ This scripts allows you to compile and compute automatically in multithread, the
 · Note that after it ends, it does a `rm *x` to delete executables in the directory               
 · To run it: `python3 cheat_lab8.py`
 
-You can always (recommended) compile all at once with [ComandosCompilacion](/S8/ComandosCompilacion) and compare the results:                 
+You can always (recommended) compile all at once with [ComandosCompilacion](https://github.com/BernatBC/AC/blob/main/Lab/S8/ComandosCompilacion) and compare the results:                 
 · Give execution permission: `chmod +x ComandosCompilacion`                    
 · Run it: `./ComandosCompilacion`
 
