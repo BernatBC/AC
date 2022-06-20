@@ -1,4 +1,4 @@
-#### About the [cheat_lab8.py](/S8/cheat_lab8.py):
+#### About the [cheat_lab8.py](https://github.com/BernatBC/AC/blob/main/Lab/S8/cheat_lab8.py):
 This scripts allows you to compile and compute automatically in multithread, then it shows the average time and MFLOPS.     
 · Main program parameters you can change are __program_list__ and __N_list__                
 · Note that after it ends, it does a `rm *x` to delete executables in the directory               
@@ -8,4 +8,5 @@ You can always (recommended) compile all at once with [ComandosCompilacion](/S8/
 · Give execution permission: `chmod +x ComandosCompilacion`                    
 · Run it: `./ComandosCompilacion`
 
-__Note:__ cheat_lab8 is also available in C++ version [cheat_lab8.cc](/S8/cheat_lab8.cc)
+__Note:__ cheat_lab8 is also available in C++ version [cheat_lab8.cc](https://github.com/BernatBC/AC/blob/main/Lab/S8/cheat_lab8.cc)
+
