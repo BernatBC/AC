@@ -1,4 +1,11 @@
 # AC
+[![HitCount](https://hits.dwyl.com/BernatBC/AC.svg?style=flat-square&show=unique)](http://hits.dwyl.com/BernatBC/AC)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&show=unique)](/CONTRIBUTING.md)
+[![GitHub stars](https://img.shields.io/github/stars/BernatBC/AC.svg)](https://GitHub.com/BernatBC/AC/stargazers/)
+[![GitHub forks](https://img.shields.io/github/forks/BernatBC/AC.svg)](https://GitHub.com/BernatBC/AC/network/)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/BernatBC/AC.svg)](https://github.com/BernatBC/AC)
+[![GitHub contributors](https://img.shields.io/github/contributors/BernatBC/AC.svg)](https://GitHub.com/BernatBC/AC/graphs/contributors/)
+
 Transparències, documentació, exàmens i laboratori (resolt) de l'assignatura [AC](https://www.fib.upc.edu/en/studies/bachelors-degrees/bachelor-degree-informatics-engineering/curriculum/syllabus/AC) de la [FIB](https://www.fib.upc.edu).
 
 · Si voleu fer aportacions, teniu queixes o trobeu algun error contacteu [@BernatBC](https://github.com/BernatBC) o [@miquelt9](https://github.com/miquelt9)
