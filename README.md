@@ -1,10 +1,10 @@
 # AC
-[![HitCount](https://hits.dwyl.com/miquelt9/AC-FIB.svg?style=flat-square&show=unique)](http://hits.dwyl.com/miquelt9/AC-FIB)
+[![HitCount](https://hits.dwyl.com/BernatBC/AC.svg?style=flat-square&show=unique)](http://hits.dwyl.com/BernatBC/AC)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&show=unique)](/CONTRIBUTING.md)
-[![GitHub stars](https://img.shields.io/github/stars/miquelt9/AC-FIB.svg)](https://GitHub.com/miquelt9/AC-FIB/stargazers/)
-[![GitHub forks](https://img.shields.io/github/forks/miquelt9/AC-FIB.svg)](https://GitHub.com/miquelt9/AC-FIB/network/)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/miquelt9/AC-FIB.svg)](https://github.com/miquelt9/AC-FIB)
-[![GitHub contributors](https://img.shields.io/github/contributors/miquelt9/AC-FIB.svg)](https://GitHub.com/miquelt9/AC-FIB/graphs/contributors/)
+[![GitHub stars](https://img.shields.io/github/stars/BernatBC/AC.svg)](https://GitHub.com/BernatBC/AC/stargazers/)
+[![GitHub forks](https://img.shields.io/github/forks/BernatBC/AC.svg)](https://GitHub.com/BernatBC/AC/network/)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/BernatBC/AC.svg)](https://github.com/BernatBC/AC)
+[![GitHub contributors](https://img.shields.io/github/contributors/BernatBC/AC.svg)](https://GitHub.com/BernatBC/AC/graphs/contributors/)
 
 Transparències, documentació, exàmens i laboratori (resolt) de l'assignatura [AC](https://www.fib.upc.edu/en/studies/bachelors-degrees/bachelor-degree-informatics-engineering/curriculum/syllabus/AC) de la [FIB](https://www.fib.upc.edu).
 
